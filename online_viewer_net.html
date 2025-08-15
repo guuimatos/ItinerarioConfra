@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Itinerário Confraternização</title>
+<style>
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; margin: 20px; }
+  h2 { color: #333; margin-bottom: 20px; }
+  .accordion, .sub-accordion { 
+    background-color: #ffffff;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+  }
+  .accordion:hover, .sub-accordion:hover { background-color: #e6f0ff; }
+  .panel, .sub-panel { 
+    padding: 0 18px;
+    display: none;
+    background-color: #fafafa;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    animation: fadeIn 0.4s ease forwards;
+  }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #e6f2ff; }
+  .date-time { font-weight: bold; margin-bottom: 10px; font-size: 14px; color: #555; }
+  .totais { background-color: #d9f0d9; padding: 15px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-top: 20px; font-weight: bold; }
+  @keyframes fadeIn { from { opacity: 0; max-height: 0; } to { opacity: 1; max-height: 500px; } }
+</style>
+</head>
+<body>
+
+<h2>Itinerário Confraternização - Ida</h2>
+
+<!-- Trecho BH → Pouso Alegre -->
+<button class="accordion">BH → Pouso Alegre (Restaurante Fernandão)</button>
+<div class="panel">
+  <div class="date-time">22/08 – 08:00 / 15:05</div>
+  <table>
+    <tr><th>Transporte</th><th>Valor Unitário (R$)</th><th>Qtde</th><th>Valor Total (R$)</th><th>Observações</th></tr>
+    <tr><td>Buser</td><td>68,90</td><td>2</td><td>137,80</td><td>Viagem de ônibus Buser</td></tr>
+  </table>
+</div>
+
+<!-- Trecho Pouso Alegre → Itajubá (2 opções, sub-acordeon) -->
+<button class="accordion">Pouso Alegre → Itajubá</button>
+<div class="panel">
+  <div class="date-time">22/08 – 16:30 / 18:00</div>
+  <button class="sub-accordion">Opção 1</button>
+  <div class="sub-panel">
+    <table>
+      <tr><th>Transporte</th><th>Valor Unitário (R$)</th><th>Qtde</th><th>Valor Total (R$)</th><th>Observações</th></tr>
+      <!-- Ordem invertida: Uber primeiro -->
+      <tr><td>Uber (Restaurante Fernandão → Rodoviária)</td><td>15,00*</td><td>1</td><td>15,00*</td><td>Deslocamento interno (*estimativa)</td></tr>
+      <tr><td>Ônibus Saritur</td><td>41,05</td><td>2</td><td>82,10</td><td>Viagem de ônibus Saritur</td></tr>
+    </table>
+  </div>
+  <button class="sub-accordion">Opção 2</button>
+  <div class="sub-panel">
+    <table>
+      <tr><th>Transporte</th><th>Valor Unitário (R$)</th><th>Qtde</th><th>Valor Total (R$)</th><th>Observações</th></tr>
+      <tr><td>Uber direto</td><td>106,00</td><td>1</td><td>106,00</td><td>Corrida direta até Itajubá</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- Trecho Hospedagem (apenas 1 opção) -->
+<button class="accordion">Hospedagem</button>
+<div class="panel">
+  <div class="date-time">22/08 – Noite</div>
+  <table>
+    <tr><th>Local</th><th>Valor Unitário (R$)</th><th>Qtde</th><th>Valor Total (R$)</th><th>Observações</th></tr>
+    <tr><td>Palace Hotel</td><td>220,00</td><td>1</td><td>220,00</td><td>1 diária, casal</td></tr>
+  </table>
+</div>
+
+<h2>Itinerário Confraternização - Volta</h2>
+
+<!-- Trecho Itajubá → Pouso Alegre (2 opções, sub-acordeon) -->
+<button class="accordion">Itajubá → Pouso Alegre</button>
+<div class="panel">
+  <div class="date-time">24/08 – 08:00 / 09:45</div>
+  <button class="sub-accordion">Opção 1</button>
+  <div class="sub-panel">
+    <table>
+      <tr><th>Transporte</th><th>Valor Unitário (R$)</th><th>Qtde</th><th>Valor Total (R$)</th><th>Observações</th></tr>
+      <tr><td>Ônibus Saritur</td><td>40,80</td><td>2</td><td>81,60</td><td>Viagem de ônibus Saritur</td></tr>
+      <tr><td>Uber (Rodoviária → Fernandão)</td><td>15,00*</td><td>1</td><td>15,00*</td><td>Deslocamento interno</td></tr>
+    </table>
+  </div>
+  <button class="sub-accordion">Opção 2</button>
+  <div class="sub-panel">
+    <table>
+      <tr><th>Transporte</th><th>Valor Unitário (R$)</th><th>Qtde</th><th>Valor Total (R$)</th><th>Observações</th></tr>
+      <tr><td>Uber direto</td><td>145,00</td><td>1</td><td>145,00</td><td>Corrida direta</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- Trecho Pouso Alegre → BH (apenas 1 opção) -->
+<button class="accordion">Pouso Alegre (Restaurante Fernandão) → BH</button>
+<div class="panel">
+  <div class="date-time">24/08 – 11:30 / 18:50</div>
+  <table>
+    <tr><th>Transporte</th><th>Valor Unitário (R$)</th><th>Qtde</th><th>Valor Total (R$)</th><th>Observações</th></tr>
+    <tr><td>Buser</td><td>63,90</td><td>2</td><td>127,80</td><td>Trecho principal da volta</td></tr>
+  </table>
+</div>
+
+<!-- Trecho BH → Pocrane (apenas 1 opção) -->
+<button class="accordion">BH → Pocrane</button>
+<div class="panel">
+  <div class="date-time">25/08 – 10:30 / 19:35</div>
+  <table>
+    <tr><th>Transporte</th><th>Valor Unitário (R$)</th><th>Qtde</th><th>Valor Total (R$)</th><th>Observações</th></tr>
+    <tr><td>Passaro Verde</td><td>230,12</td><td>2</td><td>460,24</td><td>Trecho final da volta</td></tr>
+  </table>
+</div>
+
+<!-- Totais -->
+<div class="totais">
+  <p>Total Ida (Opção 1): R$ 434,90</p>
+  <p>Total Ida (Opção 2): R$ 463,80</p>
+  <p>Total Volta (Opção 1): R$ 224,40</p>
+  <p>Total Volta (Opção 2): R$ 272,80</p>
+  <p><strong>Total Geral (considerando Opção 1 ida + volta 1 + BH→Pocrane): R$ 1.129,54</strong></p>
+  <p><strong>Total Geral (considerando Opção 2 ida + volta 2 + BH→Pocrane): R$ 1.196,04</strong></p>
+</div>
+
+<script>
+  const accordions = document.getElementsByClassName("accordion");
+  for (let i = 0; i < accordions.length; i++) {
+    accordions[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+  }
+  const subAccordions = document.getElementsByClassName("sub-accordion");
+  for (let i = 0; i < subAccordions.length; i++) {
+    subAccordions[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+  }
+</script>
+
+</body>
+</html>
