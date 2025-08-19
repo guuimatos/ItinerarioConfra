@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itinerário da Confraternização</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    details {
+      background: #fff;
+      border-radius: 8px;
+      margin: 10px 0 30px 0;
+      padding: 10px 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.1em;
+    }
+    .item {
+      display: flex;
+      gap: 15px;
+      margin: 15px 0;
+      align-items: flex-start;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    .item:last-child {
+      border-bottom: none;
+    }
+    .item-text {
+      width: 50%;
+    }
+    .item img {
+      width: 50%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .price {
+      font-weight: bold;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Itinerário da Confraternização</h1>
+
+  <details open>
+   <summary>Ida (Belo Horizonte → Itajubá) - Sábado - 23/08/2025</summary>
+    <div class="item">
+      <div class="item-text">
+        <strong>Belo Horizonte → Itajubá</strong><br>
+        Blablacar<br>
+        Saída <strong>09h00</strong> – Chegada <strong>14h50</strong><br>
+        Valor Total: <span class="price">R$184,00</span>
+      </div>
+      <img src="https://i.imgur.com/uD9Iv5Y.png" alt="Imagem BH → Itajubá">
+    </div>
+  </details>
+
+  <details>
+    <summary>Volta (Itajubá → Pocrane) - Domingo - 24/08/2025</summary>
+    <div class="item">
+      <div class="item-text">
+        <strong>Itajubá → Belo Horizonte</strong><br>
+        Saritur<br>
+        Saída <strong>21h00</strong> – Chegada <strong>04h30</strong><br>
+        Valor Total: <span class="price">R$421,36</span>
+      </div>
+      <img src="https://i.imgur.com/X5LZbP9.png" alt="Imagem Pouso Alegre → BH">
+    </div>
+    <div class="item">
+      <div class="item-text">
+        <strong>Belo Horizonte → Pocrane</strong><br>
+        Saída <strong>10h30</strong> – Chegada <strong>19h35</strong><br>
+        Valor Total (incluindo Taxas ClickBus): <span class="price">R$543,08</span>
+      </div>
+      <img src="https://i.imgur.com/PPGpkjh.png" alt="Imagem BH → Pocrane">
+    </div>
+  </details>
+
+</body>
+</html>
